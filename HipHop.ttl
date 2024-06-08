@@ -1,0 +1,851 @@
+@prefix : <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop> .
+
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop> rdf:type owl:Ontology ;
+                                                             rdfs:comment "This is an antalogy about Hip-Hop"@en .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#aaddress
+:aaddress rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization> ,
+                      <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Place> ;
+          rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/PostalAddress> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#affiliated_to
+:affiliated_to rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Label> ;
+               rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#affiliation
+:affiliation rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person> ,
+                         <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Producer> ;
+             rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#album
+:album rdf:type owl:ObjectProperty ;
+       rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+       rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Album> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#arranged_for
+:arranged_for rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Arrangement> ;
+              rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Instrument> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#arranged_in
+:arranged_in rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Arrangement> ;
+             rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Place> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#arranged_version_of
+:arranged_version_of rdf:type owl:ObjectProperty ;
+                     rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Arrangement> ;
+                     rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#arrangement
+:arrangement rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+             rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Arrangement> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#arranger
+:arranger rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Arrangement> ;
+          rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#artist
+:artist rdf:type owl:ObjectProperty ;
+        rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Album> ,
+                    <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+        rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> ,
+                   <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#available_as
+:available_as rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Signal> ;
+              rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Format> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#broader
+:broader rdf:type owl:ObjectProperty ;
+         rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Genre> ;
+         rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Genre> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#composer
+:composer rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> ;
+          rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#composition
+:composition rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+             rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#contained_in_place
+:contained_in_place rdf:type owl:ObjectProperty ;
+                    rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Place> ;
+                    rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Place> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#creator
+:creator rdf:type owl:ObjectProperty ;
+         rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/CreativeWork> ;
+         rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#engineer
+:engineer rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Recording> ;
+          rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#event
+:event rdf:type owl:ObjectProperty ;
+       rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Place> ;
+       rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Event> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#founder
+:founder rdf:type owl:ObjectProperty ;
+         rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization> ;
+         rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#genre
+:genre rdf:type owl:ObjectProperty ;
+       rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/CreativeWork> ,
+                   <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+       rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Genre> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#instrument
+:instrument rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Performance> ;
+            rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Instrument> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#is_part_of
+:is_part_of rdf:type owl:ObjectProperty ;
+            rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/CreativeWork> ;
+            rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/CreativeWork> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#label
+:label rdf:type owl:ObjectProperty ;
+       rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Genre> ,
+                   <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+       rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Label> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#location
+:location rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Event> ,
+                      <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Performance> ;
+          rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Place> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#lyricist
+:lyricist rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> ;
+          rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#lyrics
+:lyrics rdf:type owl:ObjectProperty ;
+        rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> ;
+        rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/CreativeWork> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#main_entity
+:main_entity rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Playlist> ;
+             rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/CreativeWork> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#member
+:member rdf:type owl:ObjectProperty ;
+        rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> ;
+        rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#member_of
+:member_of rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> ,
+                       <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> ;
+           rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#music_arrangement
+:music_arrangement rdf:type owl:ObjectProperty ;
+                   rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> ;
+                   rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Arrangement> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#narrower
+:narrower rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Genre> ;
+          rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Genre> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#organization
+:organization rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+              rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#parent_organization
+:parent_organization rdf:type owl:ObjectProperty ;
+                     rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization> ;
+                     rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#part_of
+:part_of rdf:type owl:ObjectProperty ;
+         rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Instrument> ;
+         rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#performance
+:performance rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+             rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Performance> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#performed_as
+:performed_as rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Performance> ;
+              rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/CreativeWork> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#performed_in
+:performed_in rdf:type owl:ObjectProperty ;
+              rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Performance> ;
+              rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Event> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#performer
+:performer rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Performance> ,
+                       <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Recording> ;
+           rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#played_by
+:played_by rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Instrument> ;
+           rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#played_in
+:played_in rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Instrument> ;
+           rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#playlist
+:playlist rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+          rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Playlist> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#plays
+:plays rdf:type owl:ObjectProperty ;
+       rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> ;
+       rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Instrument> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#plays_in
+:plays_in rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> ;
+          rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#produced_by
+:produced_by rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Label> ;
+             rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#producer
+:producer rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+          rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Producer> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#publisher
+:publisher rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/CreativeWork> ;
+           rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#recorded_in
+:recorded_in rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Performance> ,
+                         <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Recording> ;
+             rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Place> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#recorded_instrument
+:recorded_instrument rdf:type owl:ObjectProperty ;
+                     rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Recording> ;
+                     rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Instrument> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#recording
+:recording rdf:type owl:ObjectProperty ;
+           rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+           rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Recording> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#release_event
+:release_event rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> ;
+               rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Event> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#release_label
+:release_label rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> ;
+               rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Label> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#released_as
+:released_as rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> ;
+             rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Format> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#released_in
+:released_in rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> ;
+             rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Place> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#sampled_version_of
+:sampled_version_of rdf:type owl:ObjectProperty ;
+                    rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Recording> ;
+                    rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Recording> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#signal
+:signal rdf:type owl:ObjectProperty ;
+        rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+        rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Signal> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#signed_artist
+:signed_artist rdf:type owl:ObjectProperty ;
+               rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Label> ;
+               rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#track
+:track rdf:type owl:ObjectProperty ;
+       rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Album> ,
+                   <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Playlist> ;
+       rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/has_performance
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/has_performance> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> ,
+                                                                                        <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> ,
+                                                                                        <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Performance> ;
+                                                                            rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Performance> ;
+                                                                            rdfs:comment "Track has performance" .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/has_recording
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/has_recording> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> ,
+                                                                                      <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> ,
+                                                                                      <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Performance> ;
+                                                                          rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Recording> ;
+                                                                          rdfs:comment "Track has recording(s)" .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/produced
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/produced> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> ,
+                                                                                 <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Label> ;
+                                                                     rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/recorded
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/recorded> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> ;
+                                                                     rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/recorded_as
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/recorded_as> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> ;
+                                                                        rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Recording> ;
+                                                                        rdfs:comment "Composition recorded as" .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/recorded_signal
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/recorded_signal> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Recording> ;
+                                                                            rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Signal> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/release
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/release> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Label> ;
+                                                                    rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/release_of
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/release_of> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Album> ;
+                                                                       rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/released_as
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/released_as> rdf:type owl:ObjectProperty ;
+                                                                        rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+                                                                        rdfs:range <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#ISRC
+:ISRC rdf:type owl:DatatypeProperty ;
+      rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#ISWC
+:ISWC rdf:type owl:DatatypeProperty ;
+      rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#address_country
+:address_country rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/PostalAddress> ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#address_locality
+:address_locality rdf:type owl:DatatypeProperty ;
+                  rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/PostalAddress> ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#address_region
+:address_region rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/PostalAddress> ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#album_production_type
+:album_production_type rdf:type owl:DatatypeProperty ;
+                       rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Album> ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#album_release_type
+:album_release_type rdf:type owl:DatatypeProperty ;
+                    rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Album> ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#award
+:award rdf:type owl:DatatypeProperty ;
+       rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person> ;
+       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#bio
+:bio rdf:type owl:DatatypeProperty ;
+     rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> ;
+     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#birth_date
+:birth_date rdf:type owl:DatatypeProperty ;
+            rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person> ;
+            rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#catalog_number
+:catalog_number rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#channels
+:channels rdf:type owl:DatatypeProperty ;
+          rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Signal> ;
+          rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#date
+:date rdf:type owl:DatatypeProperty ;
+      rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Arrangement> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Performance> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Recording> ;
+      rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#date_created
+:date_created rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/CreativeWork> ;
+              rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#date_published
+:date_published rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Album> ,
+                            <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Playlist> ;
+                rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#death_date
+:death_date rdf:type owl:DatatypeProperty ;
+            rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person> ;
+            rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#disbanded_in
+:disbanded_in rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> ;
+              rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#family
+:family rdf:type owl:DatatypeProperty ;
+        rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Instrument> ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#format_type
+:format_type rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Format> ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#formed_in
+:formed_in rdf:type owl:DatatypeProperty ;
+           rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> ;
+           rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#founding_date
+:founding_date rdf:type owl:DatatypeProperty ;
+               rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization> ;
+               rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#gender
+:gender rdf:type owl:DatatypeProperty ;
+        rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person> ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#genre
+:genre rdf:type owl:DatatypeProperty ;
+       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#home_page
+:home_page rdf:type owl:DatatypeProperty ;
+           rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> ,
+                       <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> ,
+                       <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Label> ;
+           rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#in_language
+:in_language rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/CreativeWork> ;
+             rdfs:range xsd:language .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#job_title
+:job_title rdf:type owl:DatatypeProperty ;
+           rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person> ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#knows_language
+:knows_language rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person> ;
+                rdfs:range xsd:language .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#label
+:label rdf:type owl:DatatypeProperty ;
+       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#language
+:language rdf:type owl:DatatypeProperty ;
+          rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+          rdfs:range xsd:language .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#music_composition_form
+:music_composition_form rdf:type owl:DatatypeProperty ;
+                        rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#musical_key
+:musical_key rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Album> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/CreativeWork> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Event> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Instrument> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Label> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Place> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Playlist> ,
+                  <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Producer> ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#nationality
+:nationality rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person> ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#num_tracks
+:num_tracks rdf:type owl:DatatypeProperty ;
+            rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Album> ,
+                        <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Playlist> ;
+            rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#number_of_employees
+:number_of_employees rdf:type owl:DatatypeProperty ;
+                     rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization> ;
+                     rdfs:range xsd:int .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#postal_code
+:postal_code rdf:type owl:DatatypeProperty ;
+             rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/PostalAddress> ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#release_date
+:release_date rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> ;
+              rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#release_status
+:release_status rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#release_type
+:release_type rdf:type owl:DatatypeProperty ;
+              rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#role
+:role rdf:type owl:DatatypeProperty ;
+      rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop#street_address
+:street_address rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/PostalAddress> ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/duration
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/duration> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Signal> ,
+                                                                                 <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+                                                                     rdfs:range xsd:duration .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/title
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/title> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> ,
+                                                                              <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+                                                                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/track_number
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/track_number> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:domain <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> ;
+                                                                         rdfs:range xsd:int .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Album
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Album> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Arrangement
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Arrangement> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Artist> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Composition> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/CreativeWork
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/CreativeWork> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/GeneralEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Event
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Event> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/GeneralEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Format
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Format> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/GeneralEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/GeneralEntities
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/GeneralEntities> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Genre
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Genre> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Group> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Instrument
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Instrument> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/GeneralEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Label
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Label> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Organization> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Performance
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Performance> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Person> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/GeneralEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Place
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Place> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/GeneralEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Playlist
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Playlist> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/PostalAddress
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/PostalAddress> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/GeneralEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Producer
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Producer> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Recording
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Recording> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Release> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Signal
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Signal> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track
+<http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/Track> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://www.semanticweb.org/rahne/ontologies/2024/5/hiphop/MusicEntities> .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
