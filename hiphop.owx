@@ -516,20 +516,15 @@
         <Class IRI="/Artist"/>
         <NamedIndividual IRI="#Eminem"/>
     </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#artist"/>
-        <NamedIndividual IRI="#Eminem"/>
-        <NamedIndividual IRI="#Eminem"/>
-    </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#bio"/>
         <NamedIndividual IRI="#Eminem"/>
-        <Literal>Eminem, is an American rapper, songwriter, and record producer.</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">123345678905234986532463793</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#home_page"/>
         <NamedIndividual IRI="#Eminem"/>
-        <Literal>http://eminem.com</Literal>
+        <Literal>eminem.com</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#name"/>

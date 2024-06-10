@@ -1301,9 +1301,8 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#Eminem">
         <rdf:type rdf:resource="http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"/>
-        <hiphop:artist rdf:resource="http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#Eminem"/>
-        <hiphop:bio>Eminem, is an American rapper, songwriter, and record producer.</hiphop:bio>
-        <hiphop:home_page>http://eminem.com</hiphop:home_page>
+        <hiphop:bio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">123345678905234986532463793</hiphop:bio>
+        <hiphop:home_page>eminem.com</hiphop:home_page>
         <hiphop:name>Eminem</hiphop:name>
     </NamedIndividual>
 </rdf:RDF>
