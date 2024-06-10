@@ -6,6 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -88,7 +89,7 @@
         <Class IRI="/Track"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#aaddress"/>
+        <ObjectProperty IRI="#address"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#affiliated_to"/>
@@ -418,6 +419,9 @@
         <DataProperty IRI="/track_number"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Eminem"/>
+    </Declaration>
+    <Declaration>
         <Datatype abbreviatedIRI="xsd:duration"/>
     </Declaration>
     <SubClassOf>
@@ -508,12 +512,36 @@
         <Class IRI="/Track"/>
         <Class IRI="/MusicEntities"/>
     </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="/Artist"/>
+        <NamedIndividual IRI="#Eminem"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#artist"/>
+        <NamedIndividual IRI="#Eminem"/>
+        <NamedIndividual IRI="#Eminem"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#bio"/>
+        <NamedIndividual IRI="#Eminem"/>
+        <Literal>Eminem, is an American rapper, songwriter, and record producer.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#home_page"/>
+        <NamedIndividual IRI="#Eminem"/>
+        <Literal>http://eminem.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Eminem"/>
+        <Literal>Eminem</Literal>
+    </DataPropertyAssertion>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#aaddress"/>
+        <ObjectProperty IRI="#address"/>
         <Class IRI="/Organization"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#aaddress"/>
+        <ObjectProperty IRI="#address"/>
         <Class IRI="/Place"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -837,7 +865,7 @@
         <Class IRI="/Composition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#aaddress"/>
+        <ObjectProperty IRI="#address"/>
         <Class IRI="/PostalAddress"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>

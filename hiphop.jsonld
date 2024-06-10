@@ -1,2141 +1,1226 @@
-[
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Ontology"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@language": "en",
-        "@value": "This is an antalogy about Hip-Hop"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#ISRC",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#ISWC",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#aaddress",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#address_country",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#address_locality",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#address_region",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#affiliated_to",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#affiliation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Producer"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#album",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#album_production_type",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#album_release_type",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#arranged_for",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#arranged_in",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#arranged_version_of",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#arrangement",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#arranger",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#artist",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#available_as",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Signal"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Format"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#award",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#bio",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#birth_date",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#broader",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#catalog_number",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#channels",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Signal"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#int"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#composer",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#composition",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#contained_in_place",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#creator",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#date",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#date_created",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#date_published",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#death_date",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#disbanded_in",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#engineer",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#event",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Event"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#family",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#format_type",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Format"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#formed_in",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#founder",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#founding_date",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#gender",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#genre",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre"
-      },
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#home_page",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#anyURI"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#in_language",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#language"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#instrument",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#is_part_of",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#job_title",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#knows_language",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#language"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#label",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty",
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
-      },
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#language",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#language"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#location",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Event"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#lyricist",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#lyrics",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#main_entity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#member",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#member_of",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#music_arrangement",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#music_composition_form",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#musical_key",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#name",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Event"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Producer"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#narrower",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#nationality",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#num_tracks",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#int"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#number_of_employees",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#int"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#organization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#parent_organization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#part_of",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#performance",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#performed_as",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#performed_in",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Event"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#performer",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#played_by",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#played_in",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#playlist",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#plays",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#plays_in",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#postal_code",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#produced_by",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#producer",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Producer"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#publisher",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#recorded_in",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#recorded_instrument",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#recording",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#release_date",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#release_event",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Event"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#release_label",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#release_status",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#release_type",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#released_as",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Format"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#released_in",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#role",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#sampled_version_of",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#signal",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Signal"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#signed_artist",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#street_address",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#track",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Event",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Format",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Producer",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Signal",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/duration",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Signal"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#duration"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/has_performance",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Track has performance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/has_recording",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Track has recording(s)"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/produced",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/recorded",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/recorded_as",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Composition recorded as"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/recorded_signal",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Signal"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/release",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/release_of",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/released_as",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/title",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
-      },
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/track_number",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#int"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2001/XMLSchema#duration",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Datatype"
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/2002/07/owl#topObjectProperty",
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
-      }
-    ]
-  }
-]
+[ {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This is an antalogy about Hip-Hop"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#Eminem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist" ],
+  "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#artist" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#Eminem"
+  } ],
+  "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#bio" : [ {
+    "@value" : "Eminem, is an American rapper, songwriter, and record producer."
+  } ],
+  "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#home_page" : [ {
+    "@value" : "http://eminem.com"
+  } ],
+  "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#name" : [ {
+    "@value" : "Eminem"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#ISRC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#ISWC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#address",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#address_country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#address_locality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#address_region",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#affiliated_to",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#affiliation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Producer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#album",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#album_production_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#album_release_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#arranged_for",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#arranged_in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#arranged_version_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#arrangement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#arranger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#artist",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#available_as",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Format"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#award",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#bio",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#birth_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#broader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#catalog_number",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#channels",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#composer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#composition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#contained_in_place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#date_created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#date_published",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#death_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#disbanded_in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#engineer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Event"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#family",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#format_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Format"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#formed_in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#founder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#founding_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#gender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#genre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre"
+  }, {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#home_page",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#in_language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#language"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#instrument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#is_part_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#job_title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#knows_language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#language"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#label",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
+  }, {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#language",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#language"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Event"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#lyricist",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#lyrics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#main_entity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#member",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#member_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#music_arrangement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#music_composition_form",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#musical_key",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Event"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Producer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#narrower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#nationality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#num_tracks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#number_of_employees",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#parent_organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#part_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#performance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#performed_as",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#performed_in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Event"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#performer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#played_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#played_in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#playlist",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#plays",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#plays_in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#postal_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#produced_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#producer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Producer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#recorded_in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#recorded_instrument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#recording",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#release_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#release_event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Event"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#release_label",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#release_status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#release_type",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#released_as",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Format"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#released_in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#role",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#sampled_version_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#signal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Signal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#signed_artist",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#street_address",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop#track",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Arrangement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/CreativeWork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Event",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Format",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Genre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Instrument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Playlist",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/PostalAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/GeneralEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Producer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Signal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/MusicEntities"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/duration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Signal"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/has_performance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Track has performance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/has_recording",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Track has recording(s)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Group"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Performance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/produced",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/recorded",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Artist"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/recorded_as",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Composition recorded as"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/recorded_signal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Recording"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Signal"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/release",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Label"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/release_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Album"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/released_as",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Release"
+  }, {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/track_number",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Track"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#int"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#duration",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/amir-seraj/ontologies/2024/5/hiphop/Composition"
+  } ]
+} ]
