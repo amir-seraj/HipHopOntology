@@ -1,1 +1,1 @@
-# HipHopOntology.
+# HipHopOntology
